@@ -41,9 +41,9 @@ jobs:
 workflows:
   say hello:
     jobs:
-      - say-hello1:
+      - say-hello:
           context:
-            - context-a
+            - context-z213
             - context-i
   tagged-build:
     jobs:
