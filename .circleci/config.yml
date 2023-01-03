@@ -32,13 +32,5 @@ workflows:
       - say-hello:
           context:
             - context-a
-            - context-b
-            - context-c
-            - context-d
-            - context-e
-            - context-f
-            - context-g
-            - context-h
             - context-i
       - say-goodbye
-
