@@ -50,5 +50,5 @@ workflows:
       - build:
           filters:
             tags:
-              only: /^v.*/
-      - say-goodbye
+              only:
+                - main 
