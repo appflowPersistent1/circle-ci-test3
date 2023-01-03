@@ -23,6 +23,26 @@ jobs:
       - run:
           name: "Say GoodBue"
           command: "echo Hi, Goodbye!"
+  say-hello1:
+    # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
+    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
+    docker:
+      - image: cimg/base:stable
+    # Add steps to the job
+    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "echo Hello, World!"
+  say-goodbye1:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Say GoodBue"
+          command: "echo Hi, Goodbye!"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -34,3 +54,10 @@ workflows:
             - context-a
             - context-i
       - say-goodbye
+  say hello1:
+    jobs:
+      - say-hello1:
+          context:
+            - context-a
+            - context-i
+      - say-goodbye1
