@@ -16,8 +16,26 @@ jobs:
             ./generate-config > generated_config.yml
       - continuation/continue:
           configuration_path: generated_config.yml
+  say-goodbye1:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Say GoodBye"
+          command: "echo Hi, Goodbye!"
+  say-goodbye2:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Say GoodBye"
+          command: "echo Hi, Goodbye!"
 
 workflows:
   setup:
     jobs:
       - setup
+      - say-goodbye1
+      - say-goodbye2
