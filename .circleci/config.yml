@@ -32,6 +32,46 @@ jobs:
       - run:
           name: "Say GoodBye"
           command: "echo Hi, Goodbye!"
+  say-goodbye3:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Say GoodBye"
+          command: "echo Hi, Goodbye!"
+  say-goodbye4:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Say GoodBye"
+          command: "echo Hi, Goodbye!"
+  say-goodbye5:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Say GoodBye"
+          command: "echo Hi, Goodbye!"
+  say-goodbye6:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Say GoodBye"
+          command: "echo Hi, Goodbye!"
+  say-goodbye7:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Say GoodBye"
+          command: "echo Hi, Goodbye!"
 
 workflows:
   setup:
@@ -39,3 +79,8 @@ workflows:
       - setup
       - say-goodbye1
       - say-goodbye2
+      - say-goodbye3
+      - say-goodbye4
+      - say-goodbye5
+      - say-goodbye6
+      - say-goodbye7
